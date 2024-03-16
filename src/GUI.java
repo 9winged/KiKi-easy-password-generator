@@ -1,25 +1,35 @@
-import javax.swing.BorderFactory;
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.Border;
+import javax.swing.*;
 import java.awt.*;
 import java.awt.GridLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
-public class GUI
-{
+
+public class GUI implements ActionListener {
+
+    int count = 0;
+    JLabel label;
+    JFrame frame;
+    JPanel panel;
 
     public GUI()
     {
 
-        JFrame frame = new JFrame();
+        frame = new JFrame();
 
-        JPanel panel = new JPanel();
+        JButton button = new JButton("Start");
+        label = new JLabel("Number of clicks: 0");
+        button.addActionListener(this);
+
+
+        panel = new JPanel();
         panel.setBorder(BorderFactory.createBevelBorder(30, Color.CYAN, Color.BLACK));
-        panel.setBorder((Border) new GridLayout(1, 2));
+        panel.setLayout(new GridLayout(1, 2));
+        panel.add(button);
 
         frame.add(panel, BorderLayout.CENTER);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-        frame.setTitle("KEY KEY");
+        frame.setTitle("KiKi");
         frame.pack();
         frame.setVisible(true);
 
@@ -28,5 +38,12 @@ public class GUI
     public static void main(String[] args)
     {
         new GUI();
+    }
+
+    @Override
+    public void actionPerformed(ActionEvent e) {
+
+        count++;
+        label.setText("Number of clicks:" + count);
     }
 }
