@@ -49,6 +49,6 @@ public class PasswordGenerator {
             passwordBuilder.setLength(0);
         }
 
-        System.out.println("Password: " + realPassword);
+        System.out.println("Here is your secure password: " + realPassword);
     }
 }
