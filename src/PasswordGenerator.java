@@ -1,11 +1,18 @@
 import java.util.Random;
 import java.lang.StringBuilder;
+import java.util.Scanner;
 
 public class PasswordGenerator {
-    private static final java.lang.String CHARS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%+'-/!,$";
-    private static final int PASSWORD_LENGTH = 32;
+    private static final String CHARS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%+'-/!,$";
+
+    static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
+
+
+        System.out.println("How long do you want your password to be? (e.g., 16, 32)");
+        int PASSWORD_LENGTH = Integer.parseInt(String.valueOf(scanner.nextInt()));
+
         Random random = new Random();
         StringBuilder passwordBuilder = new StringBuilder();
 
@@ -18,7 +25,7 @@ public class PasswordGenerator {
                 passwordBuilder.append(character);
             }
 
-            java.lang.String password = passwordBuilder.toString();
+            String password = passwordBuilder.toString();
 
             boolean checkSmall = false;
             boolean checkBig = false;
