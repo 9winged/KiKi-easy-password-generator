@@ -10,7 +10,7 @@ public class PasswordGenerator {
     public static void main(String[] args) {
 
 
-        System.out.println("How long do you want your password to be? (e.g., 16, 32)");
+        System.out.println("How long do you want your password to be? (at least 4 characters)");
         int PASSWORD_LENGTH = Integer.parseInt(String.valueOf(scanner.nextInt()));
 
         Random random = new Random();
