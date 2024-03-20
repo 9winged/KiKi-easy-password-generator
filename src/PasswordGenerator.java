@@ -4,6 +4,8 @@ import java.util.Scanner;
 
 public class PasswordGenerator {
 
+
+
     //array with all characters
     private static final String CHARS = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789%+'-/!,$";
     static Scanner scanner = new Scanner(System.in);
@@ -20,6 +22,10 @@ public class PasswordGenerator {
         System.out.println("Do you wan uppercase letters? (y/n)");
         String includeUppercase = scanner.nextLine();
 
+
+
+        boolean includeLowercase = includeLowercase.euqalsIgnoreCase("y");
+        boolean includeUppercase = includeUppercase.equalsIgnoreCase("y");
 
 
 
