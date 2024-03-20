@@ -24,10 +24,6 @@ public class PasswordGenerator {
 
 
 
-        boolean includeLowercase = includeLowercase.euqalsIgnoreCase("y");
-        boolean includeUppercase = includeUppercase.equalsIgnoreCase("y");
-
-
 
         //secure password generation
         SecureRandom secureRandom = new SecureRandom();
