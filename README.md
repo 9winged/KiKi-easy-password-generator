@@ -4,4 +4,5 @@ It is what it is. A simple but powerful password generator which I'm working on.
 
 Have a great day <3
 
-###### //This project is still in progress
+###### //This project is abandoned 
+###### //Working on a new Version (C#)
